@@ -11,8 +11,8 @@ export default function Contact() {
     name: "",
     email: "",
     phone: "",
-    profession: "",
-    igusername: "",
+    skill: "",
+    ig: "",
     github: "",
     twitter: "",
     linkdin: "",
@@ -35,7 +35,7 @@ export default function Contact() {
       e.preventDefault();
       
 
-      const { name, email, phone, profession,igusername,github,twitter,linkdin, password, cpassword } = user;
+      const { name, email, phone, skill,ig,github,twitter,linkdin, password, cpassword } = user;
       const res = await fetch("/contact", {
         method: "POST",
         headers: {
@@ -44,8 +44,9 @@ export default function Contact() {
         body: JSON.stringify({
           name,
           email,
-          profession,
-          igusername,
+          phone,
+          skill,
+          ig,
           github,
           twitter,
           linkdin,
@@ -115,8 +116,8 @@ export default function Contact() {
                   <label htmlFor="profession"></label>
                   <input
                     type="text"
-                    name="profession"
-                    id="profession"
+                    name="skill"
+                    id="skill"
                     placeholder="Enter Your Profession/Skills"
                     value={user.profession}
                     onChange={handleInputs}
@@ -126,8 +127,8 @@ export default function Contact() {
                   <label htmlFor="igusername"></label>
                   <input
                     type="text"
-                    name="igusername"
-                    id="igusername"
+                    name="ig"
+                    id="ig"
                     placeholder="Enter Your Instagram Username"
                     value={user.igusername}
                     onChange={handleInputs}
