@@ -10,11 +10,24 @@ const userSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    phone:{
-        type:Number,
+   
+    skill:{
+        type:String,
         required:true
     },
-    work:{
+    ig_username:{
+        type:String,
+        required:true
+    },
+    linkdin:{
+        type:String,
+        required:true
+    },
+    twitter:{
+        type:String,
+        required:true
+    },
+    github:{
         type:String,
         required:true
     },
