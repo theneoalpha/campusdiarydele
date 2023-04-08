@@ -15,7 +15,7 @@ router.use(express.urlencoded({ extended: true }));
 //   res.send("Hellow");
 // })
 
-router.post("/contact", async (req, res) => {
+router.post("/register", async (req, res) => {
   res.cookie("jwtoken","vikash");
   const { name, email, phone,work,password,cpassword} = req.body;
 
