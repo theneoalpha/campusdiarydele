@@ -32,7 +32,7 @@ export default function Contact() {
       
 
       const { name, email, phone, work, password, cpassword } = user;
-      const res = await fetch("/contact", {
+      const res = await fetch("/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
