@@ -17,9 +17,9 @@ router.use(express.urlencoded({ extended: true }));
 
 router.post("/register", async (req, res) => {
   res.cookie("jwtoken","vikash");
-  const { name, email, phone,work,password,cpassword} = req.body;
+  const { name, email, phone,skill,ig,github,twitter,linkdin,password,cpassword} = req.body;
 
-  if (!name || !email || !phone || !work || !password || !cpassword ) {
+  if (!name || !email || !phone || !skill || !ig || !github || !twitter || !linkdin ||  !password || !cpassword ) {
     return res.status(422).json({ error: "Please Fill the field properly" });
   }
 
@@ -30,7 +30,7 @@ router.post("/register", async (req, res) => {
     } else if (password != cpassword) {
       return res.status(400).json({ error: "Password Not Matched" });
     }
-    const user = new User({ name, work, email, phone, password, cpassword });
+    const user = new User({ name, email, skill, ig , github , twitter , linkdin , password, cpassword });
 
     
     const saveMethod = await user.save();

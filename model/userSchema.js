@@ -14,7 +14,23 @@ const userSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    work:{
+    skill:{
+        type:String,
+        required:true
+    },
+    ig:{
+        type:String,
+        required:true
+    },
+    github:{
+        type:String,
+        required:true
+    },
+    twitter:{
+        type:String,
+        required:true
+    },
+    linkdin:{
         type:String,
         required:true
     },
