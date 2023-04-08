@@ -35,7 +35,7 @@ export default function Contact() {
       e.preventDefault();
       
 
-      const { name, email, phone, skill,ig,github,twitter,linkdin, password, cpassword } = user;
+      const { name, email, phone, skill, ig, github, twitter, linkdin, password, cpassword } = user;
       const res = await fetch("/contact", {
         method: "POST",
         headers: {
