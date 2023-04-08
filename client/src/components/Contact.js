@@ -50,7 +50,7 @@ export default function Contact() {
           github,
           twitter,
           linkdin,
-          phone,
+          
           password,
           cpassword,
         }),
@@ -119,7 +119,7 @@ export default function Contact() {
                     name="skill"
                     id="skill"
                     placeholder="Enter Your Profession/Skills"
-                    value={user.profession}
+                    value={user.skill}
                     onChange={handleInputs}
                   />
                 </div>
@@ -130,7 +130,7 @@ export default function Contact() {
                     name="ig"
                     id="ig"
                     placeholder="Enter Your Instagram Username"
-                    value={user.igusername}
+                    value={user.ig}
                     onChange={handleInputs}
                   />
                 </div>
