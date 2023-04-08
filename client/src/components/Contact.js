@@ -10,8 +10,11 @@ export default function Contact() {
   const [user, setUser] = useState({
     name: "",
     email: "",
-    phone: "",
-    work: "",
+    skill: "",
+    ig_username: "",
+    linkdin: "",
+    twitter: "",
+    github: "",
     password: "",
     cpassword: "",
   });
@@ -31,7 +34,7 @@ export default function Contact() {
       e.preventDefault();
       
 
-      const { name, email, phone, work, password, cpassword } = user;
+      const { name, email, skill, ig_username, linkdin, twitter, github, password, cpassword } = user;
       const res = await fetch("/register", {
         method: "POST",
         headers: {
@@ -40,8 +43,11 @@ export default function Contact() {
         body: JSON.stringify({
           name,
           email,
-          phone,
-          work,
+          skill,
+          ig_username,
+          twitter,
+          linkdin,
+          github,
           password,
           cpassword,
         }),
@@ -92,29 +98,63 @@ export default function Contact() {
                     onChange={handleInputs}
                   />
                 </div>
+                
                 <div className="form-group">
-                  <label htmlFor="phone"></label>
+                  <label htmlFor="skill"></label>
                   <input
-                    type="number"
-                    name="phone"
-                    id="phone"
-                    placeholder="Enter Your Phone Number"
-                    value={user.phone}
+                    type="text"
+                    name="skill"
+                    id="skill"
+                    placeholder="Enter Your Profession/Skills"
+                    value={user.skill}
                     onChange={handleInputs}
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="work"></label>
+                  <label htmlFor="ig_username"></label>
                   <input
                     type="text"
-                    name="work"
-                    id="work"
-                    placeholder="Enter Your Profession/Skills"
-                    value={user.work}
+                    name="ig_username"
+                    id="ig_username"
+                    placeholder="Enter Your Instagram Profile"
+                    value={user.ig_username}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="linkdin"></label>
+                  <input
+                    type="text"
+                    name="linkdin"
+                    id="linkdin"
+                    placeholder="Enter Your Linkdin Profile"
+                    value={user.linkdin}
                     onChange={handleInputs}
                   />
                 </div>
                
+                <div className="form-group">
+                  <label htmlFor="twitter"></label>
+                  <input
+                    type="text"
+                    name="twitter"
+                    id="twitter"
+                    placeholder="Enter Your Twitter Profile"
+                    value={user.twitter}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="github"></label>
+                  <input
+                    type="text"
+                    name="github"
+                    id="github"
+                    placeholder="Enter Your Github Profile"
+                    value={user.github}
+                    onChange={handleInputs}
+                  />
+                </div>
               
                 <div className="form-group">
                   <label htmlFor="password"></label>
