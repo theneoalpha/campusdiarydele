@@ -11,11 +11,7 @@ export default function Contact() {
     name: "",
     email: "",
     phone: "",
-    skill: "",
-    ig: "",
-    github: "",
-    twitter: "",
-    linkdin: "",
+    work: "",
     password: "",
     cpassword: "",
   });
@@ -35,7 +31,7 @@ export default function Contact() {
       e.preventDefault();
       
 
-      const { name, email, phone, skill, ig, github, twitter, linkdin, password, cpassword } = user;
+      const { name, email, phone, work, password, cpassword } = user;
       const res = await fetch("/contact", {
         method: "POST",
         headers: {
@@ -45,12 +41,7 @@ export default function Contact() {
           name,
           email,
           phone,
-          skill,
-          ig,
-          github,
-          twitter,
-          linkdin,
-          
+          work,
           password,
           cpassword,
         }),
@@ -113,60 +104,18 @@ export default function Contact() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="skill"></label>
+                  <label htmlFor="work"></label>
                   <input
                     type="text"
-                    name="skill"
-                    id="skill"
+                    name="work"
+                    id="work"
                     placeholder="Enter Your Profession/Skills"
-                    value={user.skill}
+                    value={user.work}
                     onChange={handleInputs}
                   />
                 </div>
-                <div className="form-group">
-                  <label htmlFor="ig"></label>
-                  <input
-                    type="text"
-                    name="ig"
-                    id="ig"
-                    placeholder="Enter Your Instagram Username"
-                    value={user.ig}
-                    onChange={handleInputs}
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="github"></label>
-                  <input
-                    type="text"
-                    name="github"
-                    id="github"
-                    placeholder="Enter Your Github Profile"
-                    value={user.github}
-                    onChange={handleInputs}
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="twitter"></label>
-                  <input
-                    type="text"
-                    name="twitter"
-                    id="twitter"
-                    placeholder="Enter Your Twitter Handle"
-                    value={user.twitter}
-                    onChange={handleInputs}
-                  />
-                </div>
-                <div className="form-group">
-                  <label htmlFor="linkdin"></label>
-                  <input
-                    type="text"
-                    name="linkdin"
-                    id="linkdin"
-                    placeholder="Enter Your Linkdin Profile"
-                    value={user.linkdin}
-                    onChange={handleInputs}
-                  />
-                </div>
+               
+              
                 <div className="form-group">
                   <label htmlFor="password"></label>
                   <input
