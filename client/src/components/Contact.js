@@ -113,7 +113,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="profession"></label>
+                  <label htmlFor="skill"></label>
                   <input
                     type="text"
                     name="skill"
@@ -124,7 +124,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="form-group">
-                  <label htmlFor="igusername"></label>
+                  <label htmlFor="ig"></label>
                   <input
                     type="text"
                     name="ig"
